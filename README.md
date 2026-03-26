@@ -4,7 +4,7 @@ This repository contains the current PID-based implementation of the two-room th
 
 ## Branches
 - `main`: current PID development and analysis
-- `legacy/upstream-sync`: legacy branch kept close to the original upstream Bang-Bang repository
+- `legacy/bang-bang`: legacy branch kept close to the original upstream Bang-Bang repository
 
 # How to Set-up the Experiment using Visual Studio to Operate the Testbed
 1.	First, make sure all connections are plugged in for the DAQ, Raspberry Pi, Kasa Smart Plugs/Camera, and the Arduino.
