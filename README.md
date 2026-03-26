@@ -1,7 +1,10 @@
-# Two-Room-Synchronization
- * Python code for the two-room testbed. Don't need to open up instacal.
- * Got the base code to use the MCC DAQ from their website
- * If you want to run the file, make sure to change the filename to your path on line 114
+# Thermal Sync PID
+
+This repository contains the current PID-based implementation of the two-room thermal synchronization project.
+
+## Branches
+- `main`: current PID development and analysis
+- `legacy/upstream-sync`: legacy branch kept close to the original upstream Bang-Bang repository
 
 # How to Set-up the Experiment using Visual Studio to Operate the Testbed
 1.	First, make sure all connections are plugged in for the DAQ, Raspberry Pi, Kasa Smart Plugs/Camera, and the Arduino.
