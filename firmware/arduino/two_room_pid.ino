@@ -1,4 +1,4 @@
-// Minimal-change Arduino controller for two-room PID heating
+// Arduino controller for two-room PID heating
 // Replaces relay bang-bang commands with serial temperature input + time-proportioning outputs
 
 const int heater1Pin = 4;
