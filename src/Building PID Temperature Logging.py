@@ -328,10 +328,6 @@ async def Two_Room_Thermo_Sync():
                 if not sent_pid_setup:
                     arduino.write(f"SP={setpoint_building:.2f}\n".encode())
                     arduino.write(f"G={gains_building[0]:.4f},{gains_building[1]:.4f},{gains_building[2]:.4f}\n".encode())
-                    
-                    #arduino.write(f"SP1={setpoint_rm1:.2f},SP2={setpoint_rm2:.2f}\n".encode())
-                    #arduino.write(f"G1={gains_rm1[0]:.4f},{gains_rm1[1]:.4f},{gains_rm1[2]:.4f}\n".encode())
-                    #arduino.write(f"G2={gains_rm2[0]:.4f},{gains_rm2[1]:.4f},{gains_rm2[2]:.4f}\n".encode())
                     sent_pid_setup = True
                     
                 arduino.write(f"T1={avg_rm1:.2f},T2={avg_rm2:.2f}\n".encode())
