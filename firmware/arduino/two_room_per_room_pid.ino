@@ -1,4 +1,4 @@
-// Arduino controller for two-room PID heating
+// Minimal-change Arduino controller for two-room PID heating
 // Replaces relay bang-bang commands with serial temperature input + time-proportioning outputs
 
 const int heater1Pin = 4;
@@ -17,14 +17,14 @@ struct PIDState {
   bool heaterOn;
 };
 
-PIDState rm1 = {80.0f, 100.0f, 0.20f, 0.0f, 75.0f, 75.0f, 0.0f, 75.0f, 0.0f, false};
-PIDState rm2 = {80.0f, 100.0f, 0.20f, 0.0f, 75.0f, 75.0f, 0.0f, 75.0f, 0.0f, false};
+PIDState rm1 = {80.0f, 1.50f, 0.20f, 0.10f, 75.0f, 75.0f, 0.0f, 75.0f, 0.0f, false};
+PIDState rm2 = {80.0f, 1.50f, 0.20f, 0.10f, 75.0f, 75.0f, 0.0f, 75.0f, 0.0f, false};
 
 const unsigned long controlPeriodMs = 1000;
-const unsigned long pwmWindowMs = 10000;
+const unsigned long pwmWindowMs = 4000;
 const unsigned long serialTimeoutMs = 15000;
-const float inputFilterAlpha = 0.15f;
-const float highTempCutoffF = 88.0f;
+const float inputFilterAlpha = 0.18f;
+const float highTempCutoffF = 86.0f;
 
 unsigned long lastControlMs = 0;
 unsigned long pwmWindowStartMs = 0;
