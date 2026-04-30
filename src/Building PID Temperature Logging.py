@@ -341,8 +341,8 @@ async def Two_Room_Thermo_Sync():
                     print(f"Arduino: {status_line}")
                     status = parse_arduino_status(status_line)
                     if 'OUT' in status:
-                        heater1_output = float(status['OUT1'])
-                        heater2_output = float(status['OUT2'])
+                        heater1_output = float(status['OUT'])
+                        heater2_output = float(status['OUT'])
 
                     if 'H1' in status:
                         heater1 = bool(int(float(status['H1'])))
